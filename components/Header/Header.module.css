@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  background-color: #fafafc;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+.header__logo {
+  width: 200px;
+}

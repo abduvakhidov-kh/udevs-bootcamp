@@ -1,0 +1,14 @@
+.categories__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .categories__list:not(:last-child):after {
+  margin-right: 100px;
+} */
+
+.categories__item {
+  margin-right: 10px;
+  cursor: pointer;
+}
