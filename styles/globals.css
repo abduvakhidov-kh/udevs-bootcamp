@@ -27,7 +27,12 @@ ul {
 ._container {
   max-width: 1124px;
 }
-
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
 .btn {
   color: white;
   border: none;
@@ -45,4 +50,10 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.main {
+  padding: 14px;
+  flex: 1;
+  margin: 0 auto;
+  width: 100%;
 }
