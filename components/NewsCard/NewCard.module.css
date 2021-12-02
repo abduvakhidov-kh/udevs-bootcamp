@@ -1,0 +1,38 @@
+.newcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: center; */
+  padding: 18px 14px 0 0;
+  line-height: 24px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.newscard__img {
+  border-radius: 5px;
+  width: 100%;
+  display: block;
+}
+.newcard__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #aebec9;
+  line-height: 24px;
+  font-family: Roboto;
+}
+.newcard__time,
+.newcard__date,
+.newcard__views {
+  display: inline-block;
+  margin-left: 5px;
+}
+p.newcard__deatails {
+  margin: 0;
+  color: #000;
+}

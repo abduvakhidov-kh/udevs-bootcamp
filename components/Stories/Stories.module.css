@@ -1,3 +1,6 @@
+.stories {
+  margin-bottom: 20px;
+}
 .stories__list {
   display: flex;
 }

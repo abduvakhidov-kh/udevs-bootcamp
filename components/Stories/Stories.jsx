@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 import styles from "./Stories.module.css";
 
 export default function Stories() {
@@ -39,7 +39,6 @@ export default function Stories() {
             </a>
           </div>
         </li>
-        
       </ul>
     </div>
   );
