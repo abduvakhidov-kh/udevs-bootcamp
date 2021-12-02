@@ -9,6 +9,16 @@
 } */
 
 .categories__item {
-  margin-right: 10px;
+  margin-right: 3px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.categories__item:hover {
+  color: white;
+  border: none;
+  background-color: #1b5bf7;
   cursor: pointer;
 }

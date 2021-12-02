@@ -1,4 +1,5 @@
 .news {
+  font-family: Roboto;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 10px;
