@@ -9,7 +9,7 @@
 } */
 
 .categories__item {
-  margin-right: 3px;
+  margin-right: 10px;
   cursor: pointer;
   padding: 10px;
   transition: 0.3s;

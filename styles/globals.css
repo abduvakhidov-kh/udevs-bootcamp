@@ -7,6 +7,8 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 24px;
+
+  overflow-x: hidden;
   color: #2d2d2d;
 }
 
@@ -40,6 +42,17 @@ ul {
   padding: 12px;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.3s;
+  margin: 0 5px;
+}
+.btn:hover {
+  background-color: #174eda;
+}
+.btn__follow {
+  width: 128px;
+  line-height: 16px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .wrapper {
