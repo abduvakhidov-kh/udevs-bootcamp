@@ -10,4 +10,5 @@
 }
 .header__logo {
   width: 200px;
+  cursor: pointer;
 }
