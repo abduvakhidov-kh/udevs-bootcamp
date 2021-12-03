@@ -5,7 +5,7 @@ export default function Info() {
   return (
     <div className={styles.info}>
       <span className={styles.info__time}>18:36</span>
-      <span className={styles.info__date}>11.05.2021</span> |
+      <span className={styles.info__date}>11.05.2021 </span> |
       <span className={styles.info__views}>
         <IoEyeOutline /> 334
       </span>

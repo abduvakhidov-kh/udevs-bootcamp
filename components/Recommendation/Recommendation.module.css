@@ -1,0 +1,36 @@
+.rec {
+  grid-area: 1 / 5 / 4 / 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 360px;
+  margin-left: 15px;
+}
+.rec__header {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #212121;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.rec__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.rec__img {
+  width: 90%;
+  padding-right: 5px;
+  border-radius: 10px;
+}
+
+.rec__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
