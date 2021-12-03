@@ -1,13 +1,15 @@
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Article from "../../components/Article/Article";
 import Author from "../../components/Author/Author";
 import Recommendation from "../../components/Recommendation/Recommendation";
 import styles from "../../styles/DetailsPage.module.css";
 
 function detailsPage() {
-  // const router = useRouter();
+  const router = useRouter();
 
-  // const newId = router.query.newId;
+  const newId = router.query.newId;
+
+  console.log(newId);
 
   // send request to backend api
   return (
