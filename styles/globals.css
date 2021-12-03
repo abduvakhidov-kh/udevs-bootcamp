@@ -36,12 +36,11 @@ ul {
 }
 
 ._container {
-  max-width: 1324px;
+  max-width: 1224px;
 }
 .content {
   display: flex;
   flex-direction: column;
-  width: 100vw;
   height: 100vh;
 }
 .btn {
