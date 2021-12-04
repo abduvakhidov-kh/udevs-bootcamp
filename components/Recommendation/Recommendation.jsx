@@ -9,21 +9,21 @@ export default function Recommendation() {
         <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
         <div className={styles.rec__info}>
           <p className={styles.rec__text}>ВОЗ: молодые жители Европы стали меньше курить</p>
-          <Info/>
+          <Info views={234} />
         </div>
       </div>
       <div className={styles.rec__item}>
         <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
         <div className={styles.rec__info}>
           <p className={styles.rec__text}>ВОЗ: молодые жители Европы стали меньше курить</p>
-          <Info/>
+          <Info views={241} />
         </div>
       </div>
       <div className={styles.rec__item}>
         <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
         <div className={styles.rec__info}>
           <p className={styles.rec__text}>ВОЗ: молодые жители Европы стали меньше курить</p>
-          <Info/>
+          <Info views={324} />
         </div>
       </div>
     </div>

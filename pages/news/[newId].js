@@ -1,24 +1,38 @@
+import { onSnapshot, collection, doc, getDoc } from "@firebase/firestore";
+import { db } from "../../utils/firebase";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Article from "../../components/Article/Article";
 import Author from "../../components/Author/Author";
 import Recommendation from "../../components/Recommendation/Recommendation";
 import styles from "../../styles/DetailsPage.module.css";
 
-function detailsPage() {
-  // const router = useRouter();
+function DetailsPage() {
+  const router = useRouter();
+  const newId = router.query.newId;
+  const [newItem, setNewItem] = useState();
 
-  // const newId = router.query.newId;
+  useEffect(() => {
+    const docRef = doc(db, "news", `${newId}`);
+    getDoc(docRef).then((req) => setNewItem(req.data()));
+  }, []);
 
-  // console.log(newId);
-
+  console.log(newItem);
   // send request to backend api
   return (
     <div className={`${styles.detailsPage} _container wrapper `}>
-      <Author />
-      <Article />
+      <Author author={newItem?.author}/>
+      <Article
+        src={newItem?.src}
+        time={newItem?.time}
+        description={newItem?.description}
+        author={newItem?.author}
+        views={newItem?.views}
+        title={newItem?.title}
+      />
       <Recommendation />
     </div>
   );
 }
 
-export default detailsPage;
+export default DetailsPage;

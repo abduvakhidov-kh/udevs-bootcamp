@@ -2,19 +2,17 @@ import styles from "./NewCard.module.css";
 import Link from "next/link";
 import Info from "../Info/Info";
 
-export default function NewCard() {
+export default function NewCard({ title, src, views, time, id}) {
+  
+  console.log(id)
   return (
     <>
-      <Link href="/news/bb">
+      <Link href={"/news/" + id}>
         <div className={styles.newcard}>
-          <img
-            src="/assets/img/newsimg.png"
-            alt="news pic"
-            className={styles.newscard__img}
-          />
-          <Info />
+          <img src={`${src}`} alt="news pic" className={styles.newscard__img} />
+          <Info time={time} views={views} />
           <p className={styles.newcard__deatails}>
-            ВОЗ: молодые жители Европы стали меньше курить, но пристрастились
+            {title}
             .....
           </p>
         </div>
