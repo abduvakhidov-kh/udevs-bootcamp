@@ -11,7 +11,7 @@
 .categories__item {
   margin-right: 10px;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
   transition: 0.3s;
   border-radius: 10px;
 }

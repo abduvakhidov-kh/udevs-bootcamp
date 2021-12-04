@@ -9,7 +9,7 @@ export default function Recommendation() {
         <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
         <div className={styles.rec__info}>
           <p className={styles.rec__text}>ВОЗ: молодые жители Европы стали меньше курить</p>
-          <Info views={234} />
+          <Info views={324} />
         </div>
       </div>
       <div className={styles.rec__item}>
@@ -23,7 +23,7 @@ export default function Recommendation() {
         <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
         <div className={styles.rec__info}>
           <p className={styles.rec__text}>ВОЗ: молодые жители Европы стали меньше курить</p>
-          <Info views={324} />
+          <Info views={216} />
         </div>
       </div>
     </div>

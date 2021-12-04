@@ -1,6 +1,7 @@
 import { onSnapshot, collection, doc, getDoc } from "@firebase/firestore";
 import { db } from "../../utils/firebase";
 import { useRouter } from "next/router";
+import Head from "next/head"
 import { useEffect, useState } from "react";
 import Article from "../../components/Article/Article";
 import Author from "../../components/Author/Author";
@@ -20,6 +21,10 @@ function DetailsPage() {
   console.log(newItem);
   // send request to backend api
   return (
+    <>
+    <Head>
+      <title>{newItem?.title}</title>
+    </Head>
     <div className={`${styles.detailsPage} _container wrapper `}>
       <Author author={newItem?.author}/>
       <Article
@@ -29,9 +34,10 @@ function DetailsPage() {
         author={newItem?.author}
         views={newItem?.views}
         title={newItem?.title}
-      />
+        />
       <Recommendation />
     </div>
+        </>
   );
 }
 

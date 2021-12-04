@@ -1,0 +1,10 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.modal__input {
+  width: 100%;
+}
