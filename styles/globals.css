@@ -81,3 +81,10 @@ ul {
   margin: 0 auto;
   width: 100%;
 }
+.author {
+  width: 100%;
+}
+.author__item {
+  width: 500px !important;
+  height: 300px !important;
+}

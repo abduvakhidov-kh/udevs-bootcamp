@@ -1,13 +1,16 @@
-import { onSnapshot, collection, query, orderBy, where} from "@firebase/firestore";
+import {
+  onSnapshot,
+  collection,
+  query,
+  orderBy,
+  where,
+} from "@firebase/firestore";
 import { db } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import Article from "../../components/Article/Article";
-import Author from "../../components/Author/Author";
-import Recommendation from "../../components/Recommendation/Recommendation";
 import Info from "../../components/Info/Info";
-import styles from "../../components/Recommendation/Recommendation.module.css"
+import styles from "../../styles/Author.module.css";
 
 function DetailsPage() {
   const router = useRouter();
@@ -16,7 +19,7 @@ function DetailsPage() {
 
   useEffect(() => {
     const collectionRef = collection(db, "news");
-    
+
     const q = query(collectionRef, where("author", "==", author));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -37,21 +40,72 @@ function DetailsPage() {
       <Head>
         <title>{news?.title}</title>
       </Head>
-      <div>
 
-      {news.map((newItem, index) => {
-        return (
-          <div className={`${styles.rec} wrapper _container`} key={index}>
-          <div className={styles.rec__item}>
-            <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
-            <div className={styles.rec__info}>
-              <p className={styles.rec__text}>{newItem.title}</p>
-              <Info views={newItem.views} />
+      <div className={`${styles.author} wrapper _container`}>
+        <div className={styles.author__info}>
+          <img src="/assets/img/authorpage.png" />
+          <div className={styles.author__details}>
+            <h2>{author}</h2>
+            <table className={styles.author__table}>
+              <tr>
+                <td className={styles.author__prop}>Карьера</td>
+                <td>Писатель</td>
+              </tr>
+              <tr>
+                <td className={styles.author__prop}>Дата рождения</td>
+                <td>2 ноября, 1974 (46 лет)</td>
+              </tr>
+              <tr>
+                <td className={styles.author__prop}>Место рождения</td>
+                <td>Черняховск, СССР (Россия)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div className={styles.author__publications}>
+          <h3>ПУБЛИКАЦИИ</h3>
+          <div className={styles.author__pub}>
+            <img src="/assets/img/article.png" className={styles.author__img} />
+            <div className={styles.author__pub__info}>
+              <h4>
+                По инициативе Узбекистана создана Группа друзей по правам
+                молодежи
+              </h4>
+              <div className={styles.pub__num}>
+                <Info views={634} />
+              </div>
+              <p>
+                Посланник Генерального секретаря ООН по делам молодежи Джаятма
+                Викраманаяке приняла участие в презентации созданной по
+                инициативе Узбекистана Группе друзей по правам молодежи. В
+                рамках этого международного проекта планируется продвижение прав
+                молодых жителей планеты и расшире...
+              </p>
+              <button className="btn">Читать</button>
+            </div>
+          </div>
+          {/* ################### */}
+          <div className={styles.author__pub}>
+            <img src="/assets/img/article.png" className={styles.author__img} />
+            <div className={styles.author__pub__info}>
+              <h4>
+                По инициативе Узбекистана создана Группа друзей по правам
+                молодежи
+              </h4>
+              <div className={styles.pub__num}>
+                <Info views={634} />
+              </div>
+              <p>
+                Посланник Генерального секретаря ООН по делам молодежи Джаятма
+                Викраманаяке приняла участие в презентации созданной по
+                инициативе Узбекистана Группе друзей по правам молодежи. В
+                рамках этого международного проекта планируется продвижение прав
+                молодых жителей планеты и расшире...
+              </p>
+              <button className="btn">Читать</button>
             </div>
           </div>
         </div>
-      )
-      })}
       </div>
     </>
   );

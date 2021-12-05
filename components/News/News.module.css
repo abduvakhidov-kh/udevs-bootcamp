@@ -1,12 +1,12 @@
 .news {
   font-family: Roboto;
   display: grid;
+  gap: 2;
   grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
   margin-bottom: 20px;
-  margin: 1px;
 }
 .news__pagination {
   display: flex;
