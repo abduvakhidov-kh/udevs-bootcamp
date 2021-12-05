@@ -1,12 +1,15 @@
 import Footer from "./Footer/Footer";
-import Header from "./Header/Header"
+import Header from "./Header/Header";
+import { AuthProvider } from "./Authprovider";
 const Layout = ({ children }) => {
   return (
-    <div className="content">
-      <Header />
-      {children}
-      <Footer />
-    </div>
+    <AuthProvider>
+      <div className="content">
+        <Header />
+        {children}
+        <Footer />
+      </div>
+    </AuthProvider>
   );
 };
 

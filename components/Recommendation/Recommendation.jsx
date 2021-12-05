@@ -2,6 +2,7 @@ import styles from "./Recommendation.module.css";
 import Info from "../Info/Info";
 
 export default function Recommendation() {
+  
   return (
     <div className={styles.rec}>
       <h3 className={styles.rec__header}>ЛУЧШИЕ БЛОГИ</h3>
