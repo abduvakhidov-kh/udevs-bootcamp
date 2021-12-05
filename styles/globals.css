@@ -44,9 +44,9 @@ ul {
   height: 100vh;
 }
 .btn {
-  color: white;
+  color: white !important;
   border: none;
-  background-color: #1b5bf7;
+  background-color: #1b5bf7 !important;
   padding: 12px;
   border-radius: 10px;
   cursor: pointer;
