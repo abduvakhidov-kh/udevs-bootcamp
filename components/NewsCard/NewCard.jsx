@@ -4,7 +4,6 @@ import Info from "../Info/Info";
 
 export default function NewCard({ title, src, views, time, id}) {
   
-  console.log(id)
   return (
     <>
       <Link href={"/news/" + id}>

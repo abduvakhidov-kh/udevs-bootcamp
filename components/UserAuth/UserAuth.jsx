@@ -38,8 +38,15 @@ const style = {
 const btnstyle = {
   bgcolor: "#1b5bf7",
   color: "white",
+  border: "none",
+  background: "#1b5bf7",
+  padding: "12px",
+  borderRadius: "10px",
+  cursor: "pointer",
+  transition: "0.3s",
+  margin: "10px 5px",
   "&:hover": {
-    background: "#f00",
+    background: "#174eda",
   },
 };
 

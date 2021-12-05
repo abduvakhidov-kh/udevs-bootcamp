@@ -3,7 +3,6 @@ import { IoEyeOutline } from "react-icons/io5";
 
 export default function Info({time, views}) {
 
-  console.log(time)
   return (
     <div className={styles.info}>
       <span className={styles.info__time}>18:36</span>

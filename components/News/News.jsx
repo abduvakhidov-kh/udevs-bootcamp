@@ -25,7 +25,6 @@ export default function News() {
     return unsubscribe;
   }, []);
 
-  console.log(news);
   return (
     <div className={`${styles.news}`}>
       {news.map((item, index) => {
