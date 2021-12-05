@@ -50,7 +50,8 @@ export default function UserAuth() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState("");
-  const [currentUser, setCurrentUser] = useState("" | null);
+  const [currentUser, setCurrentUser] = useState("");
+  const [login, setLogin] = useState(false)
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -74,6 +75,7 @@ export default function UserAuth() {
         // ...
         alert(auth.currentUser.email);
         console.log(userSignIn);
+        setLogin(true)
       })
       .catch((error) => {
         let errorCode = error.code;
@@ -90,6 +92,7 @@ export default function UserAuth() {
         let userSignIn = userCredential.user;
         setCurrentUser(auth?.currentUser);
         alert(auth.currentUser.email);
+        setLogin(true)
       })
       .catch((error) => {
         let errorCode = error.code;
@@ -102,13 +105,13 @@ export default function UserAuth() {
 
   const handleSignOut = async () => {
     signOut(auth).then(() => {
-      setCurrentUser(auth.currentUser);
+      setLogin(false);
     });
     console.log(currentUser.email);
   };
 
   {
-    if (currentUser == false) {
+    if (login == false) {
       return (
         <div>
           <div className="btn__group">

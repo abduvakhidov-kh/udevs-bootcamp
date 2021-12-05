@@ -37,11 +37,11 @@ function DetailsPage() {
       <Head>
         <title>{news?.title}</title>
       </Head>
-      {news.map(newItem => {
-        return (
+      <div>
 
-          <div className={`${styles.rec} wrapper _container`}>
-          
+      {news.map((newItem, index) => {
+        return (
+          <div className={`${styles.rec} wrapper _container`} key={index}>
           <div className={styles.rec__item}>
             <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
             <div className={styles.rec__info}>
@@ -52,6 +52,7 @@ function DetailsPage() {
         </div>
       )
       })}
+      </div>
     </>
   );
 }
