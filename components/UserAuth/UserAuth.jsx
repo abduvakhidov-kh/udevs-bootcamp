@@ -35,6 +35,11 @@ const style = {
   borderRadius: 3,
 };
 
+const btnstyle = {
+  bgcolor: "#1b5bf7",
+  color: "white"
+}
+
 export default function UserAuth() {
   const [open, setOpen] = useState(false);
   const [passOpen, setPassOpen] = useState(false);
@@ -104,10 +109,10 @@ export default function UserAuth() {
       return (
         <div>
           <div className="btn__group">
-            <Button onClick={handleOpen} className="btn">
+            <Button onClick={handleOpen} className="btn" sx={btnstyle}>
               Регистрация
             </Button>
-            <Button onClick={handleOpenSign} className="btn">
+            <Button onClick={handleOpenSign} className="btn" sx={btnstyle}>
               Вход
             </Button>
           </div>
@@ -187,7 +192,7 @@ export default function UserAuth() {
                   onClick={(e) => setAvatar(e.target.value)}
                 />
               </Stack>
-              <Button onClick={handleOpenPass} className="btn">
+              <Button onClick={handleOpenPass} className="btn" sx={btnstyle}>
                 Далее
               </Button>
             </Box>
@@ -239,7 +244,7 @@ export default function UserAuth() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Box>
-              <Button className="btn" onClick={handleReg}>
+              <Button className="btn" onClick={handleReg} sx={btnstyle}>
                 Войти
               </Button>
             </Box>
@@ -293,7 +298,7 @@ export default function UserAuth() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Box>
-              <Button className="btn" onClick={handleSignIn}>
+              <Button className="btn" onClick={handleSignIn} sx={btnstyle}>
                 Войти
               </Button>
             </Box>
@@ -306,7 +311,7 @@ export default function UserAuth() {
           <IconContext.Provider value={{ color: "blue", size: "30px" }}>
             <IoChatboxEllipsesOutline />
           </IconContext.Provider>
-          <Button className="btn" onClick={handleSignOut}>
+          <Button className="btn" onClick={handleSignOut} sx={btnstyle}>
             Выйти
           </Button>
         </>
