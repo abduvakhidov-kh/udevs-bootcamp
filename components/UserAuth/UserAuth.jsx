@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
-import {IconContext} from "react-icons"
+import { IconContext } from "react-icons";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -12,7 +12,7 @@ import styles from "./UserAuth.module.css";
 import { auth } from "../../utils/firebase";
 import {
   createUserWithEmailAndPassword,
-  signInUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
 
@@ -37,8 +37,11 @@ const style = {
 
 const btnstyle = {
   bgcolor: "#1b5bf7",
-  color: "white"
-}
+  color: "white",
+  "&:hover": {
+    background: "#f00",
+  },
+};
 
 export default function UserAuth() {
   const [open, setOpen] = useState(false);
@@ -82,7 +85,7 @@ export default function UserAuth() {
   };
 
   const handleSignIn = async () => {
-    signInUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         let userSignIn = userCredential.user;
         setCurrentUser(auth?.currentUser);
