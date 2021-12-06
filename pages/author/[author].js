@@ -65,7 +65,9 @@ function DetailsPage() {
         <div className={styles.author__publications}>
           <h3>ПУБЛИКАЦИИ</h3>
           {pubs.map((pub, index) => {
-            <div className={styles.author__pub} key="index">
+            return (
+
+              <div className={styles.author__pub} key="index">
               <img src="/assets/img/article.png" className={styles.author__img} />
               <div className={styles.author__pub__info}>
                 <h4>
@@ -85,9 +87,10 @@ function DetailsPage() {
                 <button className="btn">Читать</button>
               </div>
             </div>
+          )
           })}
           {/* ################### */}
-          <div className={styles.author__pub}>
+          {/* <div className={styles.author__pub}>
             <img src="/assets/img/article.png" className={styles.author__img} />
             <div className={styles.author__pub__info}>
               <h4>
@@ -106,7 +109,7 @@ function DetailsPage() {
               </p>
               <button className="btn">Читать</button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

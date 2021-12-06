@@ -9,6 +9,7 @@
 .author__name {
   line-height: 20px;
   margin: 14px 0 19px;
+  cursor: pointer;
 }
 .author__buttons {
   width: 100%;
