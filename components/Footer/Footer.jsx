@@ -34,10 +34,10 @@ export default function Footer() {
               <li className={styles.footer__links__item}>
                 <h4 className={styles.footer__header}>Ресурсы</h4>
               </li>
-              <li className={styles.footer__links__item}>Статьи</li>
-              <li className={styles.footer__links__item}>Журналы</li>
-              <li className={styles.footer__links__item}>Газеты</li>
-              <li className={styles.footer__links__item}>Диплом</li>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>Статьи</li>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>Журналы</li>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>Газеты</li>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>Диплом</li>
             </ul>
           </li>
           <li className={styles.footer__item}>
@@ -45,10 +45,10 @@ export default function Footer() {
               <li className={styles.footer__links__item}>
                 <h4 className={styles.footer__header}>O нас</h4>
               </li>
-              <li className={styles.footer__links__item}>Контакты</li>
-              <li className={styles.footer__links__item}>Помощь</li>
-              <li className={styles.footer__links__item}>Заявки</li>
-              <li className={styles.footer__links__item}>Политика</li>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>Контакты</li>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>Помощь</li>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>Заявки</li>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>Политика</li>
             </ul>
           </li>
           <li className={styles.footer__item}>
@@ -56,7 +56,7 @@ export default function Footer() {
               <li className={styles.footer__links__item}>
                 <h4 className={styles.footer__header}>Помощь</h4>
               </li>
-              <li className={styles.footer__links__item}>
+              <li className={`${styles.footer__links__item} ${styles.footer__link}`}>
                 Часто задаваемые вопросы
               </li>
             </ul>
