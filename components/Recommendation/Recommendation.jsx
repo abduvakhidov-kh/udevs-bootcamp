@@ -30,7 +30,6 @@ export default function Recommendation() {
     return unsubscribe;
   }, []);
 
-  console.log(popular);
   return (
     <div className={styles.rec}>
       <h3 className={styles.rec__header}>ЛУЧШИЕ БЛОГИ</h3>
@@ -52,28 +51,6 @@ export default function Recommendation() {
           </div>
         );
       })}
-
-      {/* <div className={styles.rec__item}>
-        <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
-        <div className={styles.rec__info}>
-          <p className={styles.rec__text}>ВОЗ: молодые жители Европы стали меньше курить</p>
-          <Info views={324} />
-        </div>
-      </div>
-      <div className={styles.rec__item}>
-        <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
-        <div className={styles.rec__info}>
-          <p className={styles.rec__text}>ВОЗ: молодые жители Европы стали меньше курить</p>
-          <Info views={241} />
-        </div>
-      </div>
-      <div className={styles.rec__item}>
-        <img src="/assets/img/newsimg.png" alt="" className={styles.rec__img}/>
-        <div className={styles.rec__info}>
-          <p className={styles.rec__text}>ВОЗ: молодые жители Европы стали меньше курить</p>
-          <Info views={216} />
-        </div>
-      </div> */}
     </div>
   );
 }

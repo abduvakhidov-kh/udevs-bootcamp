@@ -1,11 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { auth } from "../utils/firebase.js";
 
-export const AuthContext = React.createContext();
+export const AuthContext = React.createContext(
+  {
+    category: '',
+    setCategory: () => {},
+  }
+);
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-
+  const [category, setCategory] = useState("all");
+  const value = useMemo(
+    () => ({ category, setCategory }), 
+    [category]
+  );
 //   // useEffect(() => {
 //   //   // auth.onAuthStateChange(setCurrentUser)
 //   //   setCurrentUser(currentUser);
@@ -13,9 +21,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{
-        currentUser,
-      }}
+      value={value}
     >
       {children}
     </AuthContext.Provider>
