@@ -20,6 +20,7 @@
   line-height: 38px;
   text-align: left;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .article__text {
   font-size: 18px;

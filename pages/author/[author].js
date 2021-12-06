@@ -15,7 +15,7 @@ import styles from "../../styles/Author.module.css";
 function DetailsPage() {
   const router = useRouter();
   const author = router.query.author;
-  const [news, setNews] = useState([]);
+  const [pubs, setPubs] = useState([]);
 
   useEffect(() => {
     const collectionRef = collection(db, "news");
@@ -23,7 +23,7 @@ function DetailsPage() {
     const q = query(collectionRef, where("author", "==", author));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      setNews(
+      setPubs(
         snapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
@@ -33,12 +33,12 @@ function DetailsPage() {
     });
     return unsubscribe;
   }, []);
-  console.log(news);
+  console.log(pubs);
   // send request to backend api
   return (
     <>
       <Head>
-        <title>{news?.title}</title>
+        <title>{pubs?.title}</title>
       </Head>
 
       <div className={`${styles.author} wrapper _container`}>
@@ -64,26 +64,28 @@ function DetailsPage() {
         </div>
         <div className={styles.author__publications}>
           <h3>ПУБЛИКАЦИИ</h3>
-          <div className={styles.author__pub}>
-            <img src="/assets/img/article.png" className={styles.author__img} />
-            <div className={styles.author__pub__info}>
-              <h4>
-                По инициативе Узбекистана создана Группа друзей по правам
-                молодежи
-              </h4>
-              <div className={styles.pub__num}>
-                <Info views={634} />
+          {pubs.map((pub, index) => {
+            <div className={styles.author__pub} key="index">
+              <img src="/assets/img/article.png" className={styles.author__img} />
+              <div className={styles.author__pub__info}>
+                <h4>
+                  По инициативе Узбекистана создана Группа друзей по правам
+                  молодежи
+                </h4>
+                <div className={styles.pub__num}>
+                  <Info views={pub.views} />
+                </div>
+                <p>
+                  Посланник Генерального секретаря ООН по делам молодежи Джаятма
+                  Викраманаяке приняла участие в презентации созданной по
+                  инициативе Узбекистана Группе друзей по правам молодежи. В
+                  рамках этого международного проекта планируется продвижение прав
+                  молодых жителей планеты и расшире...
+                </p>
+                <button className="btn">Читать</button>
               </div>
-              <p>
-                Посланник Генерального секретаря ООН по делам молодежи Джаятма
-                Викраманаяке приняла участие в презентации созданной по
-                инициативе Узбекистана Группе друзей по правам молодежи. В
-                рамках этого международного проекта планируется продвижение прав
-                молодых жителей планеты и расшире...
-              </p>
-              <button className="btn">Читать</button>
             </div>
-          </div>
+          })}
           {/* ################### */}
           <div className={styles.author__pub}>
             <img src="/assets/img/article.png" className={styles.author__img} />

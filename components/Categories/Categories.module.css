@@ -14,6 +14,7 @@
   padding: 5px;
   transition: 0.3s;
   border-radius: 10px;
+  line-height: 2.7;
 }
 
 .categories__item:hover {

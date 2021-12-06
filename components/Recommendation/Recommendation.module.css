@@ -20,6 +20,12 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px 0;
+  cursor: pointer;
+  transition: ease-out .3s;
+}
+
+.rec__item:hover {
+  scale: 1.1;
 }
 
 .rec__img {

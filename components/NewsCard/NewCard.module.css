@@ -9,7 +9,13 @@
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
+  transition: .3s;
 }
+
+.newcard:hover {
+  scale: 1.1;
+}
+
 .newscard__img {
   border-radius: 5px;
   width: 95%;
@@ -18,6 +24,6 @@
 }
 .newcard__deatails {
   margin: 0;
-  font-family: Roboto !important;
   color: #000;
+  font-family: Roboto, sans-serif;
 }
