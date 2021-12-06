@@ -26,19 +26,19 @@ export default function Categories() {
         </li>
         <li
           className={styles.categories__item}
-          onClick={(e) => setCategory("all")}
+          onClick={(e) => setCategory("administration")}
         >
           Администрирование
         </li>
         <li
           className={styles.categories__item}
-          onClick={(e) => setCategory("all")}
+          onClick={(e) => setCategory("design")}
         >
           Дизайн
         </li>
         <li
           className={styles.categories__item}
-          onClick={(e) => setCategory("all")}
+          onClick={(e) => setCategory("managment")}
         >
           Менеджмент
         </li>
